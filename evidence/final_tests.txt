@@ -1,0 +1,13 @@
+test_add_and_list (test_main.TaskTrackerTests.test_add_and_list) ... ok
+test_delete_valid (test_main.TaskTrackerTests.test_delete_valid) ... ok
+test_reject_blank_name (test_main.TaskTrackerTests.test_reject_blank_name) ... ok
+test_reject_out_of_range (test_main.TaskTrackerTests.test_reject_out_of_range) ... ok
+test_reject_zero_index (test_main.TaskTrackerTests.test_reject_zero_index) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+
+EXIT CODE: 0

@@ -1,0 +1,30 @@
+{
+  "baseline": {
+    "tests": {
+      "command": "python -m unittest discover -v",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "test_add_and_list (test_main.TaskTrackerTests.test_add_and_list) ... ok\ntest_delete_valid (test_main.TaskTrackerTests.test_delete_valid) ... ok\ntest_reject_blank_name (test_main.TaskTrackerTests.test_reject_blank_name) ... FAIL\ntest_reject_out_of_range (test_main.TaskTrackerTests.test_reject_out_of_range) ... ERROR\ntest_reject_zero_index (test_main.TaskTrackerTests.test_reject_zero_index) ... FAIL\n\n======================================================================\nERROR: test_reject_out_of_range (test_main.TaskTrackerTests.test_reject_out_of_range)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/mnt/data/Assignment05_TaskTracker/baseline/test_main.py\", line 28, in test_reject_out_of_range\n    main.delete_task(5)\n    ~~~~~~~~~~~~~~~~^^^\n  File \"/mnt/data/Assignment05_TaskTracker/baseline/main.py\", line 9, in delete_task\n    tasks.pop(number - 1)\n    ~~~~~~~~~^^^^^^^^^^^^\nIndexError: pop from empty list\n\n======================================================================\nFAIL: test_reject_blank_name (test_main.TaskTrackerTests.test_reject_blank_name)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/mnt/data/Assignment05_TaskTracker/baseline/test_main.py\", line 18, in test_reject_blank_name\n    with self.assertRaises(ValueError):\n         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_reject_zero_index (test_main.TaskTrackerTests.test_reject_zero_index)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/mnt/data/Assignment05_TaskTracker/baseline/test_main.py\", line 23, in test_reject_zero_index\n    with self.assertRaises(ValueError):\n         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 5 tests in 0.001s\n\nFAILED (failures=2, errors=1)\n"
+    },
+    "syntax": {
+      "command": "python -m compileall -q main.py test_main.py",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "final": {
+    "tests": {
+      "command": "python -m unittest discover -v",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_add_and_list (test_main.TaskTrackerTests.test_add_and_list) ... ok\ntest_delete_valid (test_main.TaskTrackerTests.test_delete_valid) ... ok\ntest_reject_blank_name (test_main.TaskTrackerTests.test_reject_blank_name) ... ok\ntest_reject_out_of_range (test_main.TaskTrackerTests.test_reject_out_of_range) ... ok\ntest_reject_zero_index (test_main.TaskTrackerTests.test_reject_zero_index) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n"
+    },
+    "syntax": {
+      "command": "python -m compileall -q main.py test_main.py",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  }
+}

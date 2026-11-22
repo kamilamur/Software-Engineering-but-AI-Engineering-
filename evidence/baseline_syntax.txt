@@ -1,0 +1,2 @@
+COMMAND: python -m compileall -q main.py test_main.py
+EXIT CODE: 0

@@ -1,0 +1,43 @@
+test_add_and_list (test_main.TaskTrackerTests.test_add_and_list) ... ok
+test_delete_valid (test_main.TaskTrackerTests.test_delete_valid) ... ok
+test_reject_blank_name (test_main.TaskTrackerTests.test_reject_blank_name) ... FAIL
+test_reject_out_of_range (test_main.TaskTrackerTests.test_reject_out_of_range) ... ERROR
+test_reject_zero_index (test_main.TaskTrackerTests.test_reject_zero_index) ... FAIL
+
+======================================================================
+ERROR: test_reject_out_of_range (test_main.TaskTrackerTests.test_reject_out_of_range)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/Assignment05_TaskTracker/baseline/test_main.py", line 28, in test_reject_out_of_range
+    main.delete_task(5)
+    ~~~~~~~~~~~~~~~~^^^
+  File "/mnt/data/Assignment05_TaskTracker/baseline/main.py", line 9, in delete_task
+    tasks.pop(number - 1)
+    ~~~~~~~~~^^^^^^^^^^^^
+IndexError: pop from empty list
+
+======================================================================
+FAIL: test_reject_blank_name (test_main.TaskTrackerTests.test_reject_blank_name)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/Assignment05_TaskTracker/baseline/test_main.py", line 18, in test_reject_blank_name
+    with self.assertRaises(ValueError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_reject_zero_index (test_main.TaskTrackerTests.test_reject_zero_index)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/Assignment05_TaskTracker/baseline/test_main.py", line 23, in test_reject_zero_index
+    with self.assertRaises(ValueError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+
+
+EXIT CODE: 1
